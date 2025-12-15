@@ -1,0 +1,18 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{listing.title}}</h2>
+<ul>
+    <li>title : {{listing.title}} </li>
+    <li>sold : {{listing.sold|yesno}} </li>
+    <li>year : {{band.year_formed}} </li>
+    <li>band: {{listing.band}} </li>
+</ul>
+
+<p>{{listing.desciption}}</p>
+
+<a href="{% url 'listing-list' %}">Retour a tous les groupes</a>
+
+
+{% endblock %}
