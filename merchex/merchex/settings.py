@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 import os
-
 from pathlib import Path
 
 os.environ.setdefault("PGDATABASE", "merchex")
@@ -47,7 +46,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 SECRET_KEY = 'django-insecure-t0^74wv@lytp02!w5_&d=fd8!iw38&!(xtyzb32xodi&_ce)i@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG") == "True"
 
 ALLOWED_HOSTS = ["*"]
 

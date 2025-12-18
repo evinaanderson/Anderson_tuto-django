@@ -1,1 +1,2 @@
-web: gunicorn merchex.wsgi:application --bind 0.0.0.0:PORT
+web: daphe merchex.asgi:application --port $PORT --bind 0.0.0.0
+
