@@ -1,1 +1,1 @@
-web: gunicorn merchex.wsgi --log-file -
+web: gunicorn merchex.wsgi:application --bind 0.0.0.0:PORT
